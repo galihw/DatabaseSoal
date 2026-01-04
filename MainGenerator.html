@@ -233,11 +233,17 @@
 					</article>
 				</section>
 				<p></p>
-				<div id="_Bab">
-				</div>
-				<div id="_No">
-				</div>
+				<div id="_Bab">Bab = 1</div>
+				<div id="_No">No = 1</div>
 				<p></p>
+				<button id="bAmbil" class="model" onclick="fAmbil()">Ambil</button>
+				<br>
+				<br>
+				<div id="_Total">Total ambil = 0</div>
+				<br>
+				<button id="bLihat" class="model" onclick="fLihatSoal()" disabled="true">Lihat Soal</button>
+				<br>
+				<button id="bPrint" class="model" onclick="fPreview()" disabled="true">Preview</button>
 				
 				<script>
 					var arBabNo = [15,20,23,20,13,30,20,19,10,20];
@@ -272,6 +278,7 @@
 						}
 					});
 					function MasukBab(no){
+						//klik bab
 						nBab = no;
 						//console.log(nNo+" "+nBab+" "+Arimax[nBab-1])
 						if(nNo>Arimax[nBab-1]) nNo = Arimax[nBab-1];
@@ -283,6 +290,7 @@
 						document.getElementById("_No").innerHTML="No = "+nNo;
 					}
 					function MasukNo(no){
+						//klik nomor soal
 						nNo = no;
 						Cek(nBab,nNo);
 						document.getElementById("_Bab").innerHTML="Bab = "+nBab;
@@ -297,12 +305,11 @@
 					function Cek(no1,no2){
 						//console.log("Bab = "+no1+" -- No = "+no2);
 						fCek = !(no1==0 || no2==0);
-						nmPrint[no1-1](no2,"d1","c1","d2","c2","d3","c3");
+						nmPrint[no1-1](no2,"d1","c1","d2","c2","d3","c3",0);
 						
 					}
-				
-					
 					function ButtonShow(nMax){
+						// button bab - <=nMax show - > nMax hide
 						for(var i=1;i<=19;i++){
 							var element=document.getElementById("btn"+i);
 							if(i>nMax){
@@ -333,15 +340,156 @@
 				<h3>Bentuk Soal:</h3>
 				<div id="container">
 					<div id="d1"></div>
-					<canvas id=c1></canvas>
+					<canvas id="c1"></canvas>
 					<div id="d2"></div>
-					<canvas id=c2></canvas>
+					<canvas id="c2"></canvas>
 					<div id="d3"></div>
-					<canvas id=c3></canvas>
+					<canvas id="c3"></canvas>
+					
+					
+					<div id="d11"></div>
+					<canvas id="c11"></canvas>
+					<div id="d12"></div>
+					<canvas id="c12"></canvas>
+					<div id="d13"></div>
+					<canvas id="c13"></canvas>
+					
+					<div id="d21"></div>
+					<canvas id="c21"></canvas>
+					<div id="d22"></div>
+					<canvas id="c22"></canvas>
+					<div id="d23"></div>
+					<canvas id="c23"></canvas>
+					
+					<div id="d31"></div>
+					<canvas id="c31"></canvas>
+					<div id="d32"></div>
+					<canvas id="c32"></canvas>
+					<div id="d33"></div>
+					<canvas id="c33"></canvas>
+					
+					<div id="d41"></div>
+					<canvas id="c41"></canvas>
+					<div id="d42"></div>
+					<canvas id="c42"></canvas>
+					<div id="d43"></div>
+					<canvas id="c43"></canvas>
+					
+					<div id="d51"></div>
+					<canvas id="c51"></canvas>
+					<div id="d52"></div>
+					<canvas id="c52"></canvas>
+					<div id="d53"></div>
+					<canvas id="c53"></canvas>
+					
+					<div id="d61"></div>
+					<canvas id="c61"></canvas>
+					<div id="d62"></div>
+					<canvas id="c62"></canvas>
+					<div id="d63"></div>
+					<canvas id="c63"></canvas>
+					
+					<div id="d71"></div>
+					<canvas id="c71"></canvas>
+					<div id="d72"></div>
+					<canvas id="c72"></canvas>
+					<div id="d73"></div>
+					<canvas id="c73"></canvas>
+					
+					<div id="d81"></div>
+					<canvas id="c81"></canvas>
+					<div id="d82"></div>
+					<canvas id="c82"></canvas>
+					<div id="d83"></div>
+					<canvas id="c83"></canvas>
+					
+					<div id="d91"></div>
+					<canvas id="c91"></canvas>
+					<div id="d92"></div>
+					<canvas id="c92"></canvas>
+					<div id="d93"></div>
+					<canvas id="c93"></canvas>
+					
+					<div id="d101"></div>
+					<canvas id="c101"></canvas>
+					<div id="d102"></div>
+					<canvas id="c102"></canvas>
+					<div id="d103"></div>
+					<canvas id="c103"></canvas>
+					
+					<div id="d111"></div>
+					<canvas id="c111"></canvas>
+					<div id="d112"></div>
+					<canvas id="c112"></canvas>
+					<div id="d113"></div>
+					<canvas id="c113"></canvas>
+					
+					<div id="d121"></div>
+					<canvas id="c121"></canvas>
+					<div id="d122"></div>
+					<canvas id="c122"></canvas>
+					<div id="d123"></div>
+					<canvas id="c123"></canvas>
+					
+					<div id="d131"></div>
+					<canvas id="c131"></canvas>
+					<div id="d132"></div>
+					<canvas id="c132"></canvas>
+					<div id="d133"></div>
+					<canvas id="c133"></canvas>
+					
+					<div id="d141"></div>
+					<canvas id="c141"></canvas>
+					<div id="d142"></div>
+					<canvas id="c142"></canvas>
+					<div id="d143"></div>
+					<canvas id="c143"></canvas>
+					
+					<div id="d151"></div>
+					<canvas id="c151"></canvas>
+					<div id="d152"></div>
+					<canvas id="c152"></canvas>
+					<div id="d153"></div>
+					<canvas id="c153"></canvas>
+					
+					<div id="d161"></div>
+					<canvas id="c161"></canvas>
+					<div id="d162"></div>
+					<canvas id="c162"></canvas>
+					<div id="d163"></div>
+					<canvas id="c163"></canvas>
+					
+					<div id="d171"></div>
+					<canvas id="c171"></canvas>
+					<div id="d172"></div>
+					<canvas id="c172"></canvas>
+					<div id="d173"></div>
+					<canvas id="c173"></canvas>
+					
+					<div id="d181"></div>
+					<canvas id="c181"></canvas>
+					<div id="d182"></div>
+					<canvas id="c182"></canvas>
+					<div id="d183"></div>
+					<canvas id="c183"></canvas>
+					
+					<div id="d191"></div>
+					<canvas id="c191"></canvas>
+					<div id="d192"></div>
+					<canvas id="c192"></canvas>
+					<div id="d193"></div>
+					<canvas id="c193"></canvas>
+					
+					<div id="d201"></div>
+					<canvas id="c201"></canvas>
+					<div id="d202"></div>
+					<canvas id="c202"></canvas>
+					<div id="d203"></div>
+					<canvas id="c203"></canvas>
+					
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="./Dasar.js"></script>
 		<script type="text/javascript" src="./Dir1.js"></script>
 		<script type="text/javascript" src="./Dir2.js"></script>
 		<script type="text/javascript" src="./Dir3.js"></script>
@@ -352,14 +500,16 @@
 		<script type="text/javascript" src="./Dir8.js"></script>
 		<script type="text/javascript" src="./Dir9.js"></script>
 		<script type="text/javascript" src="./Dir10.js"></script>
+		<script type="text/javascript" src="./Dir11.js"></script>
 		<script type="text/javascript">
 						
-			var Arimax = [15,20,23,20,13,30,20,19,10,20];
-			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10];
+			var Arimax = [15,20,23,20,13,30,20,19,10,20,20];
+			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11];
 			var np = 0;
 			var no = 0;
+			var ArrAmbil = [];
 			function ShowHideButton(){
-				maxBab = 10;
+				maxBab = 11;
 				
 				//console.log(nBab,Arimax[nBab-1])
 				maxNo = Arimax[nBab-1];
@@ -367,10 +517,168 @@
 				ButtonShowNo(maxNo);
 				Cek(nBab,nNo);
 			}
+			function fAmbil(){
+				// Ambil soal yang aktif
+				ArrAmbil.push({bab:nBab,no:nNo});
+				document.getElementById("_Total").innerHTML="Total ambil = "+ArrAmbil.length;
+				//console.log(ArrAmbil);
+				
+				if(ArrAmbil.length==20){
+					document.getElementById("bAmbil").disabled = true;
+				}
+				
+				document.getElementById("bLihat").disabled = false;
+			}
+			function fLihatSoal(){
+				// melihat seluruh soal yang sudah di ambil
+				ButtonShow(0);
+				ButtonShowNo(0);
+				var element
+				element=document.getElementById("bAmbil");
+				element.disabled = true;
+				element=document.getElementById("bLihat");
+				element.disabled = true;
+			
+				var d1 = document.getElementById("d1");
+				var d2 = document.getElementById("d2");
+				var d3 = document.getElementById("d3");
+				
+				const ctx1 = c1.getContext("2d");ctx1.reset();ctx1.clearRect(0, 0, 1000, 1000);
+				const ctx2 = c2.getContext("2d");ctx2.reset();ctx2.clearRect(0, 0, 1000, 1000);
+				const ctx3 = c3.getContext("2d");ctx3.reset();ctx3.clearRect(0, 0, 1000, 1000);
+				d1.innerHTML="";
+				d2.innerHTML="";
+				d3.innerHTML="";
+				c1.width=0;c1.height=0;
+				c2.width=0;c2.height=0;
+				c3.width=0;c3.height=0;
+				
+				for(var i=1;i<=ArrAmbil.length;i++){
+					var nb = ArrAmbil[i-1].bab;
+					var nn = ArrAmbil[i-1].no;
+					
+					var dd1 = "d"+i+"1";
+					var dd2 = "d"+i+"2";
+					var dd3 = "d"+i+"3";
+					var cc1 = "c"+i+"1";
+					var cc2 = "c"+i+"2";
+					var cc3 = "c"+i+"3";
+					nmPrint[nb-1](nn,dd1,cc1,dd2,cc2,dd3,cc3,i);
+				}
+				
+				document.getElementById("bPrint").disabled = false;
+			}
+			function fPreview(){
+				// ambil data
+				var ArWH = [];
+				var ArUrl = [];
+				var ArInner = [];
+				//console.log("---"+ArrAmbil.length)
+				for(var i=1;i<=ArrAmbil.length;i++){
+					var dd1 = "d"+i+"1";
+					var dd2 = "d"+i+"2";
+					var dd3 = "d"+i+"3";
+					var cc1 = "c"+i+"1";
+					var cc2 = "c"+i+"2";
+					var cc3 = "c"+i+"3";
+					var Gdd1=document.getElementById(dd1);
+					var Gdd2=document.getElementById(dd2);
+					var Gdd3=document.getElementById(dd3);
+					var Gcc1=document.getElementById(cc1);
+					var Gcc2=document.getElementById(cc2);
+					var Gcc3=document.getElementById(cc3);
+					//console.log("---"+Gcc1.width);
+					ArWH.push([Gcc1.width,Gcc1.height,Gcc2.width,Gcc2.height,Gcc3.width,Gcc3.height]);
+					ArUrl.push([Gcc1.toDataURL('image/png'),Gcc2.toDataURL('image/png'),Gcc3.toDataURL('image/png')]);
+					ArInner.push([Gdd1.innerHTML,Gdd2.innerHTML,Gdd3.innerHTML]);
+				}
+				
+				document.body.innerHTML = ''; // reset body // kosongkan layar
+				
+				
+				var divPrint = document.createElement('div');
+				divPrint.innerHTML = "Kumpulan soal pilihan";
+				divPrint.style.align = "center";
+				
+				var buttonCetak = document.createElement('button');
+				buttonCetak.innerHTML = "Cetak";
+				buttonCetak.onclick = funcPrint;
+				document.body.appendChild(buttonCetak);
+				var buttonUlang = document.createElement('button');
+				buttonUlang.innerHTML = "Ulang";
+				buttonUlang.onclick = funcUlang;
+				document.body.appendChild(buttonUlang);
+				
+				// cetak satu per satu soal
+				for(var i=1;i<=ArrAmbil.length;i++){
+					var wh = ArWH[i-1];
+					//console.log(wh[0])
+					var url = ArUrl[i-1];
+					var inner = ArInner[i-1];
+					var ddd1 = document.createElement('div');
+					var ddd2 = document.createElement('div');
+					var ddd3 = document.createElement('div');
+					ddd1.style.color = "#000000"
+					ddd2.style.color = "#000000"
+					ddd3.style.color = "#000000"
+					
+					var ccc1 = document.createElement('img');
+					ccc1.width = wh[0];
+					ccc1.height = wh[1];
+					var ccc2 = document.createElement('img');
+					ccc2.width = wh[2];
+					ccc2.height = wh[3];
+					var ccc3 = document.createElement('img');
+					ccc3.width = wh[4];
+					ccc3.height = wh[5];
+					
+					if(ccc1.height==0)	hidingElemen(ccc1);
+					if(ccc2.height==0)	hidingElemen(ccc2);
+					if(ccc3.height==0)	hidingElemen(ccc3);
+					
+					document.body.appendChild(ddd1);
+					document.body.appendChild(ccc1);
+					document.body.appendChild(ddd2);
+					document.body.appendChild(ccc2);
+					document.body.appendChild(ddd3);
+					document.body.appendChild(ccc3);
+					
+					ddd1.innerHTML = inner[0];
+					ccc1.src = url[0];
+					ddd2.innerHTML = inner[1];
+					ccc2.src = url[1];
+					ddd3.innerHTML = inner[2];
+					ccc3.src = url[2];
+					
+					
+					if(inner[0]=="")	hidingElemen(ddd1);
+					if(inner[1]=="")	hidingElemen(ddd2);
+					if(inner[2]=="")	hidingElemen(ddd3);
+				}
+				
+				
+				function funcPrint(){
+					// klik dan save to pdf atau print langsung
+					buttonCetak.disabled = true;
+					buttonUlang.disabled = true;
+					hidingElemen(buttonCetak); // hide sebelum print
+					hidingElemen(buttonUlang); // hide sebelum print
+					print();
+				}
+				function funcUlang(){
+					// F5
+					window.parent.location.href="MainGenerator.html";
+				}
+				function hidingElemen(elem){
+					//hiding elemen
+					elem.setAttribute("hidden", "hidden");
+				}
+			}
 			
 			ShowHideButton()
 			document.getElementById("_Bab").innerHTML="Bab = "+nBab;
 			document.getElementById("_No").innerHTML="No = "+nNo;
+			document.getElementById("_Total").innerHTML="Total ambil = "+0;
 		</script>
 	</body>
 </html>
