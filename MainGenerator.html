@@ -659,8 +659,8 @@
 				
 				function funcPrint(){
 					// klik dan save to pdf atau print langsung
-					buttonCetak.disabled = true;
-					buttonUlang.disabled = true;
+					nonAktifElemen(buttonCetak); // non aktif tombol
+					nonAktifElemen(buttonUlang); // non aktif tombol
 					hidingElemen(buttonCetak); // hide sebelum print
 					hidingElemen(buttonUlang); // hide sebelum print
 					print();
@@ -669,16 +669,22 @@
 					// F5
 					window.parent.location.href="MainGenerator.html";
 				}
-				function hidingElemen(elem){
-					//hiding elemen
-					elem.setAttribute("hidden", "hidden");
-				}
+			}
+			function hidingElemen(elem){
+				//hiding elemen
+				elem.setAttribute("hidden", "hidden");
+			}
+			function nonAktifElemen(elem){
+				//non aktif elemen
+				elem.disabled = true;
 			}
 			
 			ShowHideButton()
 			document.getElementById("_Bab").innerHTML="Bab = "+nBab;
 			document.getElementById("_No").innerHTML="No = "+nNo;
 			document.getElementById("_Total").innerHTML="Total ambil = "+0;
+			nonAktifElemen(document.getElementById("bLihat"));
+			nonAktifElemen(document.getElementById("bPrint"));
 		</script>
 	</body>
 </html>

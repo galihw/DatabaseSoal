@@ -1,4 +1,4 @@
-function Print6(no,d1,c1,d2,c2,d3,c3){
+function Print6(no,d1,c1,d2,c2,d3,c3,nourut){
 	function RandomAngkaAtoB(a,b){ 
 		var r = a+Math.ceil(Math.random() * b);
 		return r;
@@ -2117,14 +2117,16 @@ function Print6(no,d1,c1,d2,c2,d3,c3){
 	
 	dd1.innerHTML="<p>Bab 6 \u{2B95} Aritmatika Sosial </p>";
 	if(no==5){
-		dd1.innerHTML+="<p>"+no+". Perhatikan tabel berikut!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan tabel berikut!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan tabel berikut!</p>";
 		cc1.width = 454;
 		cc1.height= 124;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==24){
-		dd1.innerHTML+="<p>"+no+". Perhatikan tabel berikut !</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan tabel berikut!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan tabel berikut!</p>";
 		cc1.width = 480;
 		cc1.height = 128;
 		ss = namefunc[no-1](cc1.id);
@@ -2132,7 +2134,8 @@ function Print6(no,d1,c1,d2,c2,d3,c3){
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else{
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		dd1.innerHTML+="Jawaban : "+ss[1];
 	}
 }

@@ -1,4 +1,4 @@
-function Print9(no,d1,c1,d2,c2,d3,c3){
+function Print9(no,d1,c1,d2,c2,d3,c3,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const symU = "∪";
@@ -722,35 +722,40 @@ function Print9(no,d1,c1,d2,c2,d3,c3){
 	
 	dd1.innerHTML="<p>Bab 9 \u{2B95} Garis dan Sudut </p>";
 	if(no==1){
-		dd1.innerHTML+="<p>"+no+". PerhatikanPerhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 230;
 		cc1.height = 165;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==2){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 232;
 		cc1.height = 173;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==5){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 232;
 		cc1.height = 173;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==6){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 226;
 		cc1.height = 161;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==8){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 232;
 		cc1.height = 173;
 		ss = namefunc[no-1](cc1.id);
@@ -758,7 +763,8 @@ function Print9(no,d1,c1,d2,c2,d3,c3){
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else{
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		dd1.innerHTML+="Jawaban : "+ss[1];
 	}
 }

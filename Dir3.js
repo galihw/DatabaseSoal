@@ -1,4 +1,4 @@
-function Print3(no,d1,c1,d2,c2,d3,c3){
+function Print3(no,d1,c1,d2,c2,d3,c3,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	const p0 = "\u{2070}"
@@ -1767,27 +1767,31 @@ function Print3(no,d1,c1,d2,c2,d3,c3){
 	
 	dd1.innerHTML="<p>Bab 3 \u{2B95} Aljabar </p>";
 	if(no==15){
-		dd1.innerHTML+="<p>"+no+". </p>"
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". </p>";
+		else			dd1.innerHTML+="<p>"+nourut+". </p>";
 		cc1.width = 400;
 		cc1.height= 320;
 		ss = namefunc[no-1](cc1.id); 
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==16){
-		dd1.innerHTML+="<p>"+no+". </p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". </p>";
+		else			dd1.innerHTML+="<p>"+nourut+". </p>";
 		cc1.width = 161;
 		cc1.height= 52;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";  
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]; 
 	}else if(no==17){
-		dd1.innerHTML+="<p>"+no+". </p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". </p>";
+		else			dd1.innerHTML+="<p>"+nourut+". </p>";
 		cc1.width = 158;
 		cc1.height= 45;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML+="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==18){
-		dd1.innerHTML+="<p>"+no+". </p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". </p>";
+		else			dd1.innerHTML+="<p>"+nourut+". </p>";
 		cc1.width = 157;
 		cc1.height= 89;
 		ss = namefunc[no-1](cc1.id);
@@ -1795,7 +1799,8 @@ function Print3(no,d1,c1,d2,c2,d3,c3){
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else{
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		dd1.innerHTML+="Jawaban : "+ss[1];
 	}
 }

@@ -1,4 +1,4 @@
-function Print4(no,d1,c1,d2,c2,d3,c3){
+function Print4(no,d1,c1,d2,c2,d3,c3,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const symU = "∪";
@@ -1809,74 +1809,85 @@ function Print4(no,d1,c1,d2,c2,d3,c3){
 	dd1.innerHTML="<p>Bab 4 \u{2B95} Persamaan Linier Satu Variabel </p>";
 	if(no==2){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 179;
 		cc1.height= 190;
 		const MyGambar2 = PropertiAljabar2(cc1.id,ss[2]);
 		dd2.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==3){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 179;
 		cc1.height= 190;
 		const MyGambar3 = PropertiAljabar3(cc1.id,ss[2]);
 		dd2.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==7){
-		dd1.innerHTML+="<p>"+no+". Perhatikan persamaan berikut :</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan persamaan berikut :</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan persamaan berikut :</p>";
 		cc1.width = 164;
 		cc1.height= 47;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";  
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==11){
-		dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Penyelesaian dari</p>";
 		cc1.width = 198;
 		cc1.height= 47;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else if(no==14){
-		dd1.innerHTML+="<p>"+no+". Penyelesaian dari </p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Penyelesaian dari</p>";
 		cc1.width = 137;
 		cc1.height= 49;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else if(no==15){
-		dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Penyelesaian dari</p>";
 		cc1.width = 137;
 		cc1.height= 49;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else if(no==16){
-		dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Penyelesaian dari</p>";
 		cc1.width = 165;
 		cc1.height= 46;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else if(no==17){
-		dd1.innerHTML+="<p>"+no+". Nilai x yang memenuhi persamaan :</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Nilai x yang memenuhi persamaan :</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Nilai x yang memenuhi persamaan :</p>";
 		cc1.width = 110;
 		cc1.height= 250;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else if(no==18){
-		dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Penyelesaian dari</p>";
 		cc1.width = 212;
 		cc1.height= 250;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else if(no==19){
-		dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Penyelesaian dari</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Penyelesaian dari</p>";
 		cc1.width = 179;
 		cc1.height= 250;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else{
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		dd1.innerHTML+="Jawaban : "+ss[1];
 	}
 }

@@ -1,4 +1,4 @@
-function Print8(no,d1,c1,d2,c2,d3,c3){
+function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const symU = "∪";
@@ -2198,35 +2198,40 @@ function Print8(no,d1,c1,d2,c2,d3,c3){
 	
 	dd1.innerHTML="<p>Bab 8 \u{2B95} Persamaan Garis Lurus </p>";
 	if(no==2){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 264;
 		cc1.height = 269;
 		ss = namefunc[no-1](cc1.id);;
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==3){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 200;
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);;
 		//document.write("<p>"+ss[0]+"</p>");
 		dd2.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==4){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 200;
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);;
 		//document.write("<p>"+ss[0]+"</p>");
 		dd2.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==5){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
 		cc1.width = 300;
 		cc1.height = 280;
 		ss = namefunc[no-1](cc1.id);;
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==6){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut!</p>";
 		cc1.width = 300;
 		cc1.height = 220;
 		
@@ -2240,7 +2245,8 @@ function Print8(no,d1,c1,d2,c2,d3,c3){
 		dd3.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
 	}else if(no==8){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL8 = GambarPG8(cc1.id,ss[2]);
@@ -2254,41 +2260,47 @@ function Print8(no,d1,c1,d2,c2,d3,c3){
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else if(no==10){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL10 = GambarPG10(cc1.id,ss[2]);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else if(no==15){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL15 = GambarPG15(cc1.id,ss[2]);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else if(no==17){
-		dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut :</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut :</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut :</p>";
 		cc1.width = 300;
 		cc1.height = 280;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		dd2.innerHTML+="<br>Jawaban : "+ss[1];
 	}else if(no==18){
-		dd1.innerHTML+="<p>"+no+". Perhatikan fungsi berikut:</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan fungsi berikut :</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan fungsi berikut :</p>";
 		cc1.width = 450;
 		cc1.height = 1130;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else if(no==19){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 179;
 		cc1.height = 190;
 		const MyGambar19 = GambarPG19(cc1.id,ss[2]);
 		dd2.innerHTML="<br>Jawaban : "+ss[1];
 	}else{
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		dd1.innerHTML+="Jawaban : "+ss[1];
 	}
 }

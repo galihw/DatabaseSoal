@@ -1,4 +1,4 @@
-function Print2(no,d1,c1,d2,c2,d3,c3){
+function Print2(no,d1,c1,d2,c2,d3,c3,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const sym1 = '♣';
@@ -1149,6 +1149,7 @@ function Print2(no,d1,c1,d2,c2,d3,c3){
 	
 	dd1.innerHTML="<p>Bab 2 \u{2B95} Teori Bilangan </p>";
 	ss = namefunc[no-1]();
-	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+	if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+	else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 	dd1.innerHTML+="Jawaban : "+ss[1];
 }

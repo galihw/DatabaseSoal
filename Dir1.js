@@ -1,4 +1,4 @@
-function Print1(no,d1,c1,d2,c2,d3,c3){
+function Print1(no,d1,c1,d2,c2,d3,c3,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const symU = "∪";
@@ -1339,14 +1339,16 @@ function Print1(no,d1,c1,d2,c2,d3,c3){
 	dd1.innerHTML="<p>Bab 1 \u{2B95} Himpunan </p>";
 	if(no==7){
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		cc1.width = 380;
 		cc1.height= 644;
 		var gambar = GambarHimpunan7(cc1.id,ss[2]);
 		dd2.innerHTML="<br>"+"Jawaban : "+ss[1];
 	}else{
 		ss = namefunc[no-1]();
-		dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
+		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
 		dd1.innerHTML+="Jawaban : "+ss[1];
 	}
 }
