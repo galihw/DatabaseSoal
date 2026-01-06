@@ -1,4 +1,4 @@
-function Print7(no,d1,c1,d2,c2,d3,c3,nourut){
+function Print7(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const symU = "∪";
@@ -1313,6 +1313,7 @@ function Print7(no,d1,c1,d2,c2,d3,c3,nourut){
 	var cc2=document.getElementById(c2);
 	var dd3=document.getElementById(d3);
 	var cc3=document.getElementById(c3);
+	var dd4=document.getElementById(d4);
 	const ctx1 = cc1.getContext("2d");ctx1.reset();ctx1.clearRect(0, 0, 1000, 1000);
 	const ctx2 = cc2.getContext("2d");ctx2.reset();ctx2.clearRect(0, 0, 1000, 1000);
 	const ctx3 = cc3.getContext("2d");ctx3.reset();ctx3.clearRect(0, 0, 1000, 1000);
@@ -1320,14 +1321,34 @@ function Print7(no,d1,c1,d2,c2,d3,c3,nourut){
 	dd1.innerHTML="";
 	dd2.innerHTML="";
 	dd3.innerHTML="";
+	dd4.innerHTML="";
 	cc1.width=0;cc1.height=0;
 	cc2.width=0;cc2.height=0;
 	cc3.width=0;cc3.height=0;
+	
+	dd1.removeAttribute("hidden");
+	dd2.removeAttribute("hidden");
+	dd3.removeAttribute("hidden");
+	dd4.removeAttribute("hidden");
+	cc1.removeAttribute("hidden");
+	cc2.removeAttribute("hidden");
+	cc3.removeAttribute("hidden");
+	
 	
 	
 	dd1.innerHTML="<p>Bab 7 \u{2B95} Perbandingan </p>";
 	ss = namefunc[no-1]();
 	if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
 	else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
-	dd1.innerHTML+="Jawaban : "+ss[1];
+	dd4.innerHTML+="Jawaban : "+ss[1];
+	hidingElemen(cc1);
+	hidingElemen(cc2);
+	hidingElemen(cc3);
+	hidingElemen(dd2);
+	hidingElemen(dd3);
+
+	function hidingElemen(elem){
+		//hiding elemen
+		elem.setAttribute("hidden", "hidden");
+	}
 }

@@ -1,4 +1,4 @@
-function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
+function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	//const mins = "−";
 	const mins = "\u{2212}";
 	//const symU = "∪";
@@ -2184,6 +2184,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 	var cc2=document.getElementById(c2);
 	var dd3=document.getElementById(d3);
 	var cc3=document.getElementById(c3);
+	var dd4=document.getElementById(d4);
 	const ctx1 = cc1.getContext("2d");ctx1.reset();ctx1.clearRect(0, 0, 1000, 1000);
 	const ctx2 = cc2.getContext("2d");ctx2.reset();ctx2.clearRect(0, 0, 1000, 1000);
 	const ctx3 = cc3.getContext("2d");ctx3.reset();ctx3.clearRect(0, 0, 1000, 1000);
@@ -2191,9 +2192,19 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 	dd1.innerHTML="";
 	dd2.innerHTML="";
 	dd3.innerHTML="";
+	dd4.innerHTML="";
 	cc1.width=0;cc1.height=0;
 	cc2.width=0;cc2.height=0;
 	cc3.width=0;cc3.height=0;
+	
+	dd1.removeAttribute("hidden");
+	dd2.removeAttribute("hidden");
+	dd3.removeAttribute("hidden");
+	dd4.removeAttribute("hidden");
+	cc1.removeAttribute("hidden");
+	cc2.removeAttribute("hidden");
+	cc3.removeAttribute("hidden");
+	
 	
 	
 	dd1.innerHTML="<p>Bab 8 \u{2B95} Persamaan Garis Lurus </p>";
@@ -2204,7 +2215,10 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.height = 269;
 		ss = namefunc[no-1](cc1.id);;
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
+		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd3);
 	}else if(no==3){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
@@ -2212,7 +2226,11 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);;
 		//document.write("<p>"+ss[0]+"</p>");
-		dd2.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else if(no==4){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
@@ -2220,7 +2238,11 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);;
 		//document.write("<p>"+ss[0]+"</p>");
-		dd2.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else if(no==5){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
@@ -2228,7 +2250,10 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.height = 280;
 		ss = namefunc[no-1](cc1.id);;
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd2.innerHTML+="<br>Jawaban : "+ss[1]+"<br>";
+		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd3);
 	}else if(no==6){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut!</p>";
@@ -2242,7 +2267,9 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		
 		ss = namefunc[no-1](cc1.id,cc2.id);;
 		//document.write("<p>"+ss[0]+"</p>");
-		dd3.innerHTML="<br>Jawaban : "+ss[1]+"<br>";
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc3);
+		hidingElemen(dd3);
 	}else if(no==8){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
@@ -2250,14 +2277,21 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL8 = GambarPG8(cc1.id,ss[2]);
-		dd2.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else if(no==9){
 		//document.write("<p>"+urut+". Semua persamaan garis lurus di bawah ini mempunyai gradien");
 		cc1.width = 520;
 		cc1.height = 32;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd2.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd3);
 	}else if(no==10){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
@@ -2265,7 +2299,11 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL10 = GambarPG10(cc1.id,ss[2]);
-		dd2.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else if(no==15){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
@@ -2273,7 +2311,11 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL15 = GambarPG15(cc1.id,ss[2]);
-		dd2.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else if(no==17){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut :</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut :</p>";
@@ -2281,14 +2323,21 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.height = 280;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd2.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd3);
 	}else if(no==18){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan fungsi berikut :</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan fungsi berikut :</p>";
 		cc1.width = 450;
 		cc1.height = 1130;
 		ss = namefunc[no-1](cc1.id);
-		dd2.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else if(no==19){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
@@ -2296,11 +2345,25 @@ function Print8(no,d1,c1,d2,c2,d3,c3,nourut){
 		cc1.width = 179;
 		cc1.height = 190;
 		const MyGambar19 = GambarPG19(cc1.id,ss[2]);
-		dd2.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
 	}else{
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";
-		dd1.innerHTML+="Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
+		hidingElemen(cc1);
+		hidingElemen(cc2);
+		hidingElemen(cc3);
+		hidingElemen(dd2);
+		hidingElemen(dd3);
+	}
+
+	function hidingElemen(elem){
+		//hiding elemen
+		elem.setAttribute("hidden", "hidden");
 	}
 }
