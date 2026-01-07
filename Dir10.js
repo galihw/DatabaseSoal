@@ -1986,7 +1986,7 @@ function Print10(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 10 \u{2B95} Segitiga dan Pythagoras </p>";
+	dd1.innerHTML="<p>Bab 10 \u{2192} Segitiga dan Pythagoras </p>";
 	if(no==1){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";

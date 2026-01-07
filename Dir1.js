@@ -1346,7 +1346,7 @@ function Print1(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	cc2.removeAttribute("hidden");
 	cc3.removeAttribute("hidden");
 	
-	dd1.innerHTML="<p>Bab 1 \u{2B95} Himpunan </p>";
+	dd1.innerHTML="<p>Bab 1 \u{2192} Himpunan </p>";
 	if(no==7){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";

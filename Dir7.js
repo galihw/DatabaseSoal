@@ -1336,7 +1336,7 @@ function Print7(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 7 \u{2B95} Perbandingan </p>";
+	dd1.innerHTML="<p>Bab 7 \u{2192} Perbandingan </p>";
 	ss = namefunc[no-1]();
 	if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
 	else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";

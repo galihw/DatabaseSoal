@@ -560,10 +560,19 @@ function Print3(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		let base1_image = new Image();
 		base0_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAAAvCAYAAAD0OrjvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAADCSURBVHhe7dsxCsMgAEBR7Sa5/7FynoxtAxmzlf6hfQ9EQSf54OR8vg0IPK4Zvk5sZMRGRmxkxEZGbGTERkZsZMRGRmxkxEZGbGTERkZsZMRGRmxkxEZGbGTERkZsZMT2oX3fx7ZtY855O8698wxj3P6uWmtdq/91HMe1av3K3d/dn698ZDyjZMRGRmxkxEZGbGTERkZsZMRGRmxkxEZGbGTERkZsZMRGRmxkxEZGbGTERkZsZMRGRmxkxEZGbETGeAGi7hdyVOyLOAAAAABJRU5ErkJggg==";
 		base1_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKwAAAA1CAYAAADcWABTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAC8SURBVHhe7dyhFYAwDEDBwgbdf8iOABX16M+7M8kAX0TlerYBEfeZkCBYUgRLimBJESwpgiVFsKQIlhTBkiJYUgRLimBJESwpgiVFsKQIlhTBkiJYUgRLimBJESwpgiVFsKQIlpTEI40559n4o7XW2b75/EKKk4AUwZIiWFIES4pgSREsKYIlRbCkCJYUwZIiWFIES4pgSREsKYIlRbCkCJYUwZIiWFIES4pgSREsKYIlRbCkCJYUwRIyxgu+Nw9cNLwlzQAAAABJRU5ErkJggg==";
+		
 		base0_image.onload = function () {
-			ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
-			
-			base1_image.onload = function () {
+			CekJaw();
+		}	
+		base1_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==2){
+				ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
 				var Abjad = ["A","B","C","D"];
 				for(var i=0;i<4;i++){
 					var yy = 110+50*i;
@@ -1776,7 +1785,7 @@ function Print3(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 3 \u{2B95} Aljabar </p>";
+	dd1.innerHTML="<p>Bab 3 \u{2192} Aljabar </p>";
 	if(no==15){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". </p>";
 		else			dd1.innerHTML+="<p>"+nourut+". </p>";

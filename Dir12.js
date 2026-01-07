@@ -2020,7 +2020,7 @@ function NamaBilangan(){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 12 \u{2B95} Kesebangunan </p>";
+	dd1.innerHTML="<p>Bab 12 \u{2192} Kesebangunan </p>";
 	if(no==2){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut!</p>";
@@ -2040,9 +2040,9 @@ function NamaBilangan(){
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
 		cc2.width = 190;
-		cc2.height = 122;
+		cc2.height = 200;
 		const DrawPGL = GambarKongruen3B(cc2.id,ss[2]);
-		dd3.innerHTML="<p>"+ss[0]+"</p>";
+		//dd3.innerHTML="<p>"+ss[0]+"</p>";
 		dd4.innerHTML+="<br>Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==4){

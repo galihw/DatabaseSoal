@@ -1060,7 +1060,7 @@ function Print5(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	cc3.removeAttribute("hidden");
 	
 	
-	dd1.innerHTML="<p>Bab 5 \u{2B95} Persamaan Linier Dua Variabel </p>";
+	dd1.innerHTML="<p>Bab 5 \u{2192} Persamaan Linier Dua Variabel </p>";
 	ss = namefunc[no-1]();
 	if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
 	else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";

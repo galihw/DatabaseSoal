@@ -992,6 +992,7 @@ function Print2(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		}while (fakhir)
 		
 		var ss = "" +aa+ " + " +bb+ " "+mins+" " +cc*dd+ " "+symx+" n : " +cc+ " = " +ff+ "</br>Nilai n = ... </p>"
+		if(ff<0)	ss = "" +aa+ " + " +bb+ " "+mins+" " +cc*dd+ " "+symx+" n : " +cc+ " = " +mins+Math.abs(ff)+ "</br>Nilai n = ... </p>"
 		
 		var ar_er = [-10,-5,5,10];
 		ar_er=RandomMyArray(ar_er);
@@ -1157,7 +1158,7 @@ function Print2(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	cc2.removeAttribute("hidden");
 	cc3.removeAttribute("hidden");
 	
-	dd1.innerHTML="<p>Bab 2 \u{2B95} Teori Bilangan </p>";
+	dd1.innerHTML="<p>Bab 2 \u{2192} Teori Bilangan </p>";
 	ss = namefunc[no-1]();
 	if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";
 	else			dd1.innerHTML+="<p>"+nourut+". "+ss[0]+"</p>";

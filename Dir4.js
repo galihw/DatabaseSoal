@@ -140,6 +140,13 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var hasils2 = (aa-cc)/fpb+"/"+(bb-dd);
 		var hasils3 = (aa-cc)+"/"+(bb-dd)/fpb;
 		
+		var atas1 = (aa-cc)/fpb;
+		var bawah1 = (bb-dd)/fpb;
+		var atas2 = (aa-cc)/fpb;
+		var bawah2 = (bb-dd);
+		var atas3 = (aa-cc);
+		var bawah3 = (bb-dd)/fpb;
+		
 		//–
 		/*
 		var benar = hasil;
@@ -154,15 +161,15 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var salah9 = "–"+ee*fpb;
 		*/
 		var benar = [hasil,[1,hasil,1]];
-		var salah1 = ["\u{2212}"+hasil,[-1,hasil,1]];
-		var salah2 = [hasils1,[1,(aa-cc)/fpb,(bb-dd)/fpb]];
-		var salah3 = ["\u{2212}"+hasils1,[-1,(aa-cc)/fpb,(bb-dd)/fpb]];
-		var salah4 = [hasils2,[1,(aa-cc)/fpb,(bb-dd)]];
-		var salah5 = ["\u{2212}"+hasils2,[-1,(aa-cc)/fpb,(bb-dd)]];
-		var salah6 = [hasils3+"/"+1,[1,(aa-cc),(bb-dd)/fpb]];
-		var salah7 = ["\u{2212}"+hasils3,[-1,(aa-cc),(bb-dd)/fpb]];
+		var salah1 = ["\u{2212}"+hasil,[-1,"\u{2212}"+hasil,1]];
+		var salah2 = [hasils1,[1,(aa-cc)/fpb,(bb-dd)/fpb]];				if(Mods(atas1,bawah1)==0)	salah2 = [hasils1,[1,atas1/bawah1,1]];
+		var salah3 = ["\u{2212}"+hasils1,[-1,(aa-cc)/fpb,(bb-dd)/fpb]];	if(Mods(atas1,bawah1)==0)	salah3 = ["\u{2212}"+hasils1,[-1,"\u{2212}"+atas1/bawah1,1]];
+		var salah4 = [hasils2,[1,(aa-cc)/fpb,(bb-dd)]];					if(Mods(atas2,bawah2)==0)	salah4 = [hasils2,[1,atas2/bawah2,1]];
+		var salah5 = ["\u{2212}"+hasils2,[-1,(aa-cc)/fpb,(bb-dd)]];		if(Mods(atas2,bawah2)==0)	salah5 = ["\u{2212}"+hasils2,[-1,"\u{2212}"+atas2/bawah2,1]];
+		var salah6 = [hasils3+"/"+1,[1,(aa-cc),(bb-dd)/fpb]];			if(Mods(atas3,bawah3)==0)	salah6 = [hasils3,[1,atas3/bawah3,1]];
+		var salah7 = ["\u{2212}"+hasils3,[-1,(aa-cc),(bb-dd)/fpb]];		if(Mods(atas3,bawah3)==0)	salah7 = ["\u{2212}"+hasils3,[-1,"\u{2212}"+atas3/bawah3,1]];
 		var salah8 = [ee*fpb,[1,ee*fpb,1]];
-		var salah9 = ["\u{2212}"+ee*fpb,[-1,ee*fpb,1]];
+		var salah9 = ["\u{2212}"+ee*fpb,[-1,"\u{2212}"+ee*fpb,1]];
 		var arrSalah = [salah1,salah2,salah3,salah4,salah5,salah6,salah7,salah8,salah9];
 		arrSalah = RandomMyArray(arrSalah);
 		
@@ -179,25 +186,40 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		ctx.font = "16px Times New Roman";
 		var dy=-70
+		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==2){
 				var Abjad = ["A","B","C","D"];
 				ctx.textAlign = "left";
 				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
 				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
 				for(var i=0;i<4;i++){
-					if(arrs[i][1][0]>0){
+					if(arrs[i][1][2]==1){
 						ctx.textAlign = "left";
-						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
-						ctx.textAlign = "center";
-						ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-						ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
+						ctx.fillText(arrs[i][1][1],35,46+46+46*i+dy);
 					}else{
-						ctx.textAlign = "left";
-						ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-						ctx.textAlign = "center";
-						ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-						ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+						if(arrs[i][1][0]>0){
+							ctx.textAlign = "left";
+							ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
+						}else{
+							ctx.textAlign = "left";
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+						}
 					}
 					ctx.textAlign = "left";
 					ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
@@ -263,9 +285,18 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base2_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACWSURBVHhe7dohDoAwEADBHv//MyCwJBDCqB3Tul5W1LSzn1aY7VqDFBwrOFZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgGHm1n5lrd++vMZ6c/cbXOfsmgXWlYAXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwaq0Db60STkWQSR4AAAAASUVORK5CYII=";
 		
 		ctx.font = "16px Times New Roman";
-		var dy=-70
+		var dy=-70;
 		base1_image.onload = function () {
-			base2_image.onload = function () {
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==2){
 				var Abjad = ["A","B","C","D"];
 				ctx.textAlign = "left";
 				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
@@ -831,37 +862,46 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base172_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base170_image.onload = function () {
-			ctx.drawImage(base170_image, 0, 0,base170_image.width, base170_image.height);
-			ctx.font = "16px Times New Roman";
-			ctx.textAlign = "center";
-			ctx.fillText(arr[0],14,38);
-			ctx.fillText(arr[1],64,38);
-			ctx.textAlign = "left";
-			ctx.fillText("adalah ...",0,60);
-			
-			base171_image.onload = function () {
-				base172_image.onload = function () {
-					var Abjad = ["A","B","C","D"];
-					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][0]>0){
-							ctx.textAlign = "left";
-							ctx.drawImage(base171_image, 0, 46+20+46*i,base171_image.width, base171_image.height);
-							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i);
-							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i);
-						}else{
-							ctx.textAlign = "left";
-							ctx.drawImage(base172_image, 0, 46+20+46*i,base172_image.width, base172_image.height);
-							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i);
-							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i);
-						}
+			CekJaw();
+		}	
+		base171_image.onload = function () {
+			CekJaw();
+		}
+		base172_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				ctx.drawImage(base170_image, 0, 0,base170_image.width, base170_image.height);
+				ctx.font = "16px Times New Roman";
+				ctx.textAlign = "center";
+				ctx.fillText(arr[0],14,38);
+				ctx.fillText(arr[1],64,38);
+				ctx.textAlign = "left";
+				ctx.fillText("adalah ...",0,60);
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][0]>0){
 						ctx.textAlign = "left";
-						ctx.fillText(Abjad[i]+".",0,46+46+46*i);
+						ctx.drawImage(base171_image, 0, 46+20+46*i,base171_image.width, base171_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i);
+						ctx.fillText(arrs[i][1][2],35,12+46+46+46*i);
+					}else{
+						ctx.textAlign = "left";
+						ctx.drawImage(base172_image, 0, 46+20+46*i,base172_image.width, base172_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i);
+						ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i);
 					}
+					ctx.textAlign = "left";
+					ctx.fillText(Abjad[i]+".",0,46+46+46*i);
 				}
 			}
 		}
@@ -941,47 +981,56 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base182_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base180_image.onload = function () {
-			ctx.drawImage(base180_image, 0, -7.5,base180_image.width, base180_image.height);
-			ctx.font = "16px Times New Roman";
-			ctx.textAlign = "center";
-			ctx.fillText(arr[0],22,16);
-			ctx.fillText(arr[1],54,16);
-			ctx.fillText(arr[2],40,38);
-			ctx.fillText(1,110,16);
-			ctx.fillText(arr[3],143,16);
-			ctx.fillText(arr[4],130,38);
-			ctx.fillText(arr[5],193,16);
-			ctx.fillText(arr[6],193,38);
+			CekJaw();
+		}
+		base181_image.onload = function () {
+			CekJaw();
+		}
+		base182_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				ctx.drawImage(base180_image, 0, -7.5,base180_image.width, base180_image.height);
+				ctx.font = "16px Times New Roman";
+				ctx.textAlign = "center";
+				ctx.fillText(arr[0],22,16);
+				ctx.fillText(arr[1],54,16);
+				ctx.fillText(arr[2],40,38);
+				ctx.fillText(1,110,16);
+				ctx.fillText(arr[3],143,16);
+				ctx.fillText(arr[4],130,38);
+				ctx.fillText(arr[5],193,16);
+				ctx.fillText(arr[6],193,38);
+				ctx.textAlign = "left";
+				ctx.fillText("adalah ...",0,60);
+			}
+			var Abjad = ["A","B","C","D"];
 			ctx.textAlign = "left";
-			ctx.fillText("adalah ...",0,60);
-			
-			
-			base181_image.onload = function () {
-				base182_image.onload = function () {
-					var Abjad = ["A","B","C","D"];
+			//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+			//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+			for(var i=0;i<4;i++){
+				if(arrs[i][1][0]>0){
 					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][0]>0){
-							ctx.textAlign = "left";
-							ctx.drawImage(base181_image, 0, 46+20+46*i,base181_image.width, base181_image.height);
-							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i);
-							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i);
-						}else{
-							ctx.textAlign = "left";
-							ctx.drawImage(base182_image, 0, 46+20+46*i,base182_image.width, base182_image.height);
-							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i);
-							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i);
-						}
-						ctx.textAlign = "left";
-						ctx.fillText(Abjad[i]+".",0,46+46+46*i);
-					}
+					ctx.drawImage(base181_image, 0, 46+20+46*i,base181_image.width, base181_image.height);
+					ctx.textAlign = "center";
+					ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i);
+					ctx.fillText(arrs[i][1][2],35,12+46+46+46*i);
+				}else{
+					ctx.textAlign = "left";
+					ctx.drawImage(base182_image, 0, 46+20+46*i,base182_image.width, base182_image.height);
+					ctx.textAlign = "center";
+					ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i);
+					ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i);
 				}
+				ctx.textAlign = "left";
+				ctx.fillText(Abjad[i]+".",0,46+46+46*i);
 			}
 		}
+		
 		return 0;
 	}
 	function MyPersamaanLinier19(){
@@ -1043,43 +1092,53 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base192_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base190_image.onload = function () {
-			ctx.drawImage(base190_image, 0, -4,base190_image.width, base190_image.height);
-			ctx.font = "16px Times New Roman";
-			ctx.textAlign = "center";
-			ctx.fillText(arr[0],17,38);
-			ctx.fillText(arr[1],68,25);
-			ctx.fillText(arr[2],110,16);
-			ctx.fillText(arr[3],110,38);
-			ctx.fillText(arr[4],157,25);
+			CekJaw();
+		}
+		base191_image.onload = function () {
+			CekJaw();
+		}
+		base192_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				ctx.drawImage(base190_image, 0, -4,base190_image.width, base190_image.height);
+				ctx.font = "16px Times New Roman";
+				ctx.textAlign = "center";
+				ctx.fillText(arr[0],17,38);
+				ctx.fillText(arr[1],68,25);
+				ctx.fillText(arr[2],110,16);
+				ctx.fillText(arr[3],110,38);
+				ctx.fillText(arr[4],157,25);
+				ctx.textAlign = "left";
+				ctx.fillText("adalah ...",0,60);
+			}
+			var Abjad = ["A","B","C","D"];
 			ctx.textAlign = "left";
-			ctx.fillText("adalah ...",0,60);
-			
-			base191_image.onload = function () {
-				base192_image.onload = function () {
-					var Abjad = ["A","B","C","D"];
+			//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+			//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+			for(var i=0;i<4;i++){
+				if(arrs[i][1][0]>0){
 					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][0]>0){
-							ctx.textAlign = "left";
-							ctx.drawImage(base191_image, 0, 46+20+46*i,base191_image.width, base191_image.height);
-							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i);
-							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i);
-						}else{
-							ctx.textAlign = "left";
-							ctx.drawImage(base192_image, 0, 46+20+46*i,base192_image.width, base192_image.height);
-							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i);
-							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i);
-						}
-						ctx.textAlign = "left";
-						ctx.fillText(Abjad[i]+".",0,46+46+46*i);
-					}
+					ctx.drawImage(base191_image, 0, 46+20+46*i,base191_image.width, base191_image.height);
+					ctx.textAlign = "center";
+					ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i);
+					ctx.fillText(arrs[i][1][2],35,12+46+46+46*i);
+				}else{
+					ctx.textAlign = "left";
+					ctx.drawImage(base192_image, 0, 46+20+46*i,base192_image.width, base192_image.height);
+					ctx.textAlign = "center";
+					ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i);
+					ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i);
 				}
+				ctx.textAlign = "left";
+				ctx.fillText(Abjad[i]+".",0,46+46+46*i);
 			}
 		}
+		
 		return 0;
 	}
 	function MyPersamaanLinier20(){
@@ -1817,7 +1876,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 4 \u{2B95} Persamaan Linier Satu Variabel </p>";
+	dd1.innerHTML="<p>Bab 4 \u{2192} Persamaan Linier Satu Variabel </p>";
 	if(no==2){
 		ss = namefunc[no-1]();
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". "+ss[0]+"</p>";

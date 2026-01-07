@@ -277,61 +277,73 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base1_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAWCAYAAACcy/8iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAA3SURBVFhH7c+xAQAgDITAN/vvrBaZgucaas79UmS2NRymc5jOYTqH6Rymc5jOYTqH6Rymc5gteVx4BCiyKILvAAAAAElFTkSuQmCC";
 		base2_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAuCAYAAAB04nriAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABhSURBVGhD7dihEYBADADBD/33DAg6gEHc75pE5mzmvK2NHM/chuA6wXWC6wTXCa4TXCe4TnCd4DrBdb98LWfm2b7x5mRv2jrBdYLrBNcJrhNcJ7hOcJ3gOsF1gus2C17rAj6nD078I7FNAAAAAElFTkSuQmCC";
 		base3_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
+		
 		base0_image.onload = function () {
-			ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
-			ctx.font = "16px Times New Roman";
-			ctx.textAlign = "center";
-			//ctx.fillText(arr[0],110,100);
-			//ctx.fillText(arr[1],210,160);
-			
-			var xx0 = 100;
-			var yy0 = 100;
-			var sdt = -60;
-			var rr = 100;
-			
-			var cvrt_sdt = Math.atan(dyy/dxx)*180/Math.PI;
-			JariLingkaran(xx0,yy0,rr,cvrt_sdt);
-			bulatan(xx0,yy0,rr,dxx,dyy);
-			var dy = 150;
-			ctx.textAlign = "left";
-			ctx.font = "16px Times New Roman";
-			ctx.fillText("Gradien garis PQ adalah...",0,60+dy);
-			
-			base1_image.onload = function () {
-				base2_image.onload = function () {
-					base3_image.onload = function () {
-						var Abjad = ["A","B","C","D"];
+			CekJaw();
+		}	
+		base1_image.onload = function () {
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		base3_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==4){
+				ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
+				ctx.font = "16px Times New Roman";
+				ctx.textAlign = "center";
+				//ctx.fillText(arr[0],110,100);
+				//ctx.fillText(arr[1],210,160);
+				
+				var xx0 = 100;
+				var yy0 = 100;
+				var sdt = -60;
+				var rr = 100;
+				
+				var cvrt_sdt = Math.atan(dyy/dxx)*180/Math.PI;
+				JariLingkaran(xx0,yy0,rr,cvrt_sdt);
+				bulatan(xx0,yy0,rr,dxx,dyy);
+				var dy = 150;
+				ctx.textAlign = "left";
+				ctx.font = "16px Times New Roman";
+				ctx.fillText("Gradien garis PQ adalah...",0,60+dy);
+				
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				ctx.font = "16px Times New Roman";
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][2]==1){
 						ctx.textAlign = "left";
-						//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-						//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-						ctx.font = "16px Times New Roman";
-						for(var i=0;i<4;i++){
-							if(arrs[i][1][2]==1){
-								ctx.textAlign = "left";
-								ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}else{
-								if(arrs[i][1][0]>0){
-									ctx.textAlign = "left";
-									ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-									ctx.textAlign = "center";
-									ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-									ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
-									ctx.textAlign = "left";
-									ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-								}else{
-									ctx.textAlign = "left";
-									ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
-									ctx.textAlign = "center";
-									ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-									ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
-									ctx.textAlign = "left";
-									ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-								}
-							}
+						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+						ctx.textAlign = "left";
+						ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+					}else{
+						if(arrs[i][1][0]>0){
+							ctx.textAlign = "left";
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+						}else{
+							ctx.textAlign = "left";
+							ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}
 					}
 				}
@@ -376,61 +388,74 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base1_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAWCAYAAACcy/8iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAA3SURBVFhH7c+xAQAgDITAN/vvrBaZgucaas79UmS2NRymc5jOYTqH6Rymc5jOYTqH6Rymc5gteVx4BCiyKILvAAAAAElFTkSuQmCC";
 		base2_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAuCAYAAAB04nriAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABhSURBVGhD7dihEYBADADBD/33DAg6gEHc75pE5mzmvK2NHM/chuA6wXWC6wTXCa4TXCe4TnCd4DrBdb98LWfm2b7x5mRv2jrBdYLrBNcJrhNcJ7hOcJ3gOsF1gus2C17rAj6nD078I7FNAAAAAElFTkSuQmCC";
 		base3_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
+				
 		base0_image.onload = function () {
-			ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
-			ctx.font = "16px Times New Roman";
-			ctx.textAlign = "center";
-			//ctx.fillText(arr[0],110,100);
-			//ctx.fillText(arr[1],210,160);
-			
-			var xx0 = 100;
-			var yy0 = 100;
-			var sdt = -60;
-			var rr = 100;
-			
-			var cvrt_sdt = Math.atan(dyy/dxx)*180/Math.PI;
-			JariLingkaran(xx0,yy0,rr,cvrt_sdt);
-			bulatan(xx0,yy0,rr,dxx,dyy);
-			var dy = 150;
-			ctx.textAlign = "left";
-			ctx.font = "16px Times New Roman";
-			ctx.fillText("Gradien garis PQ adalah...",0,60+dy);
-			
-			base1_image.onload = function () {
-				base2_image.onload = function () {
-					base3_image.onload = function () {
-						var Abjad = ["A","B","C","D"];
+			CekJaw();
+		}	
+		base1_image.onload = function () {
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		base3_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==4){
+				
+				ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
+				ctx.font = "16px Times New Roman";
+				ctx.textAlign = "center";
+				//ctx.fillText(arr[0],110,100);
+				//ctx.fillText(arr[1],210,160);
+				
+				var xx0 = 100;
+				var yy0 = 100;
+				var sdt = -60;
+				var rr = 100;
+				
+				var cvrt_sdt = Math.atan(dyy/dxx)*180/Math.PI;
+				JariLingkaran(xx0,yy0,rr,cvrt_sdt);
+				bulatan(xx0,yy0,rr,dxx,dyy);
+				var dy = 150;
+				ctx.textAlign = "left";
+				ctx.font = "16px Times New Roman";
+				ctx.fillText("Gradien garis PQ adalah...",0,60+dy);
+				
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				ctx.font = "16px Times New Roman";
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][2]==1){
 						ctx.textAlign = "left";
-						//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-						//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-						ctx.font = "16px Times New Roman";
-						for(var i=0;i<4;i++){
-							if(arrs[i][1][2]==1){
-								ctx.textAlign = "left";
-								ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}else{
-								if(arrs[i][1][0]>0){
-									ctx.textAlign = "left";
-									ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-									ctx.textAlign = "center";
-									ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-									ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
-									ctx.textAlign = "left";
-									ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-								}else{
-									ctx.textAlign = "left";
-									ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
-									ctx.textAlign = "center";
-									ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-									ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
-									ctx.textAlign = "left";
-									ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-								}
-							}
+						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+						ctx.textAlign = "left";
+						ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+					}else{
+						if(arrs[i][1][0]>0){
+							ctx.textAlign = "left";
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+						}else{
+							ctx.textAlign = "left";
+							ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}
 					}
 				}
@@ -578,40 +603,50 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base3_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
-				base3_image.onload = function () {
-					var dy = -60;
-					var Abjad = ["A","B","C","D"];
-					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					ctx.font = "16px Times New Roman";
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][2]==1){
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		base3_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				var dy = -60;
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				ctx.font = "16px Times New Roman";
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][2]==1){
+						ctx.textAlign = "left";
+						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+						ctx.textAlign = "left";
+						ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+					}else{
+						if(arrs[i][1][0]>0){
 							ctx.textAlign = "left";
-							ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
 							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
 							ctx.textAlign = "left";
 							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}else{
-							if(arrs[i][1][0]>0){
-								ctx.textAlign = "left";
-								ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}else{
-								ctx.textAlign = "left";
-								ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}
+							ctx.textAlign = "left";
+							ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}
 					}
 				}
@@ -699,46 +734,55 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base3_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
-				base3_image.onload = function () {
-					var dy = -70;
-					var Abjad = ["A","B","C","D"];
-					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					ctx.font = "16px Times New Roman";
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][2]==1){
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		base3_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				var dy = -70;
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				ctx.font = "16px Times New Roman";
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][2]==1){
+						ctx.textAlign = "left";
+						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+						ctx.textAlign = "left";
+						ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+					}else{
+						if(arrs[i][1][0]>0){
 							ctx.textAlign = "left";
-							ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
 							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
 							ctx.textAlign = "left";
 							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}else{
-							if(arrs[i][1][0]>0){
-								ctx.textAlign = "left";
-								ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}else{
-								ctx.textAlign = "left";
-								ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}
+							ctx.textAlign = "left";
+							ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}
 					}
 				}
 			}
 		}
-		
 		return 0;
 	}
 	function MyPersamaanGarisLurus9(){
@@ -865,40 +909,50 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base3_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
-				base3_image.onload = function () {
-					var dy = -70;
-					var Abjad = ["A","B","C","D"];
-					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					ctx.font = "16px Times New Roman";
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][2]==1){
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		base3_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				var dy = -70;
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				ctx.font = "16px Times New Roman";
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][2]==1){
+						ctx.textAlign = "left";
+						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+						ctx.textAlign = "left";
+						ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+					}else{
+						if(arrs[i][1][0]>0){
 							ctx.textAlign = "left";
-							ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
 							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
 							ctx.textAlign = "left";
 							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}else{
-							if(arrs[i][1][0]>0){
-								ctx.textAlign = "left";
-								ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}else{
-								ctx.textAlign = "left";
-								ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}
+							ctx.textAlign = "left";
+							ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}
 					}
 				}
@@ -1152,46 +1206,55 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		base3_image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAAAuCAYAAAClBX6SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAACXSURBVHhe7dohDoAwEADBHv//MyCwBDCD2TGtapoVNb3ZTyvMdq1BCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFxwqOFRwrOFZwjPzaz8y1u/d0jTdnfPHXsEJjElhPClZwrOBYwbGCYwXHCo4VHCs4VnCs4FjBsYJjBccKjhUcKzhWcKzgWMGxgmMFp9Y6ABe8Ek72fzwkAAAAAElFTkSuQmCC";
 		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
-				base3_image.onload = function () {
-					var dy = -70;
-					var Abjad = ["A","B","C","D"];
-					ctx.textAlign = "left";
-					//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-					//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-					ctx.font = "16px Times New Roman";
-					for(var i=0;i<4;i++){
-						if(arrs[i][1][2]==1){
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		base3_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==3){
+				var dy = -70;
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				ctx.font = "16px Times New Roman";
+				for(var i=0;i<4;i++){
+					if(arrs[i][1][2]==1){
+						ctx.textAlign = "left";
+						ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+						ctx.textAlign = "left";
+						ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
+					}else{
+						if(arrs[i][1][0]>0){
 							ctx.textAlign = "left";
-							ctx.drawImage(base1_image, 0, 46+20+46*i+dy,base1_image.width, base1_image.height);
+							ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
 							ctx.textAlign = "center";
-							ctx.fillText(arrs[i][1][1],35,-2+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
 							ctx.textAlign = "left";
 							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}else{
-							if(arrs[i][1][0]>0){
-								ctx.textAlign = "left";
-								ctx.drawImage(base2_image, 0, 46+20+46*i+dy,base2_image.width, base2_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}else{
-								ctx.textAlign = "left";
-								ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
-								ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
-								ctx.textAlign = "left";
-								ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
-							}
+							ctx.textAlign = "left";
+							ctx.drawImage(base3_image, 0, 46+20+46*i+dy,base3_image.width, base3_image.height);
+							ctx.textAlign = "center";
+							ctx.fillText(arrs[i][1][1],15+35,-9+46+46+46*i+dy);
+							ctx.fillText(arrs[i][1][2],15+35,12+46+46+46*i+dy);
+							ctx.textAlign = "left";
+							ctx.fillText(Abjad[i]+".",0,46+46+46*i+dy);
 						}
 					}
 				}
 			}
 		}
-		
 		return 0;
 	}
 	function MyPersamaanGarisLurus16(){
@@ -1328,7 +1391,17 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		ctx.font = "16px Times New Roman";
 		var dy=40
 		base01_image.onload = function () {
-			base02_image.onload = function () {
+			CekJawA();
+		}	
+		base02_image.onload = function () {
+			CekJawA();
+		}	
+		
+		var inside=0;
+		function CekJawA(){
+			inside++;
+			if(inside==2){
+				
 				ctx.textAlign = "left";
 				if(arr[0]==1 || arr[0]==0)	ctx.drawImage(base01_image, 82, 0,base01_image.width, base01_image.height);
 				else						ctx.drawImage(base02_image, 82, 0,base02_image.width, base02_image.height);
@@ -1348,45 +1421,55 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			}
 		}
 		
-		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
-				base3_image.onload = function () {
-					base4_image.onload = function () {
-						var Abjad = ["A","B","C","D"];
+			CekJawB();
+		}	
+		base2_image.onload = function () {
+			CekJawB();
+		}
+		base3_image.onload = function () {
+			CekJawB();
+		}
+		base4_image.onload = function () {
+			CekJawB();
+		}	
+		
+		var inside=0;
+		function CekJawB(){
+			inside++;
+			if(inside==4){
+				var Abjad = ["A","B","C","D"];
+				ctx.textAlign = "left";
+				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
+				//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
+				for(var i=0;i<4;i++){
+					if(i==0){
 						ctx.textAlign = "left";
-						//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
-						//ctx.drawImage(base2_image, 0, 0,base2_image.width, base2_image.height);
-						for(var i=0;i<4;i++){
-							if(i==0){
-								ctx.textAlign = "left";
-								ctx.drawImage(base1_image, 0, 275*i+dy,base1_image.width, base1_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText("\u{2212}"+arr[2],117,160+275*i+dy);
-								ctx.fillText(arr[1],160,80+275*i+dy)
-							}else if(i==1){
-								ctx.textAlign = "left";
-								ctx.drawImage(base2_image, 0, 275*i+dy,base2_image.width, base2_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arr[2],185,160+275*i+dy);
-								ctx.fillText(arr[1],160,72+275*i+dy)
-							}else if(i==2){
-								ctx.textAlign = "left";
-								ctx.drawImage(base3_image, 0, 275*i+dy,base3_image.width, base3_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText("\u{2212}"+arr[2],100,160+275*i+dy);
-								ctx.fillText("\u{2212}"+arr[1],165,220+275*i+dy)
-							}else{
-								ctx.textAlign = "left";
-								ctx.drawImage(base4_image, 0, 275*i+dy,base4_image.width, base4_image.height);
-								ctx.textAlign = "center";
-								ctx.fillText(arr[2],195,160+275*i+dy);
-								ctx.fillText("\u{2212}"+arr[1],165,220+275*i+dy)
-							}
-							ctx.textAlign = "left";
-							ctx.fillText(Abjad[i]+".",0,30+275*i+dy);
-						}
+						ctx.drawImage(base1_image, 0, 275*i+dy,base1_image.width, base1_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText("\u{2212}"+arr[2],117,160+275*i+dy);
+						ctx.fillText(arr[1],160,80+275*i+dy)
+					}else if(i==1){
+						ctx.textAlign = "left";
+						ctx.drawImage(base2_image, 0, 275*i+dy,base2_image.width, base2_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arr[2],185,160+275*i+dy);
+						ctx.fillText(arr[1],160,72+275*i+dy)
+					}else if(i==2){
+						ctx.textAlign = "left";
+						ctx.drawImage(base3_image, 0, 275*i+dy,base3_image.width, base3_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText("\u{2212}"+arr[2],100,160+275*i+dy);
+						ctx.fillText("\u{2212}"+arr[1],165,220+275*i+dy)
+					}else{
+						ctx.textAlign = "left";
+						ctx.drawImage(base4_image, 0, 275*i+dy,base4_image.width, base4_image.height);
+						ctx.textAlign = "center";
+						ctx.fillText(arr[2],195,160+275*i+dy);
+						ctx.fillText("\u{2212}"+arr[1],165,220+275*i+dy)
 					}
+					ctx.textAlign = "left";
+					ctx.fillText(Abjad[i]+".",0,30+275*i+dy);
 				}
 			}
 		}
@@ -1457,8 +1540,18 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		ctx.font = "16px Times New Roman";
 		var dy=-70
+		
 		base1_image.onload = function () {
-			base2_image.onload = function () {
+			CekJaw();
+		}	
+		base2_image.onload = function () {
+			CekJaw();
+		}
+		
+		var inside=0;
+		function CekJaw(){
+			inside++;
+			if(inside==2){
 				var Abjad = ["A","B","C","D"];
 				ctx.textAlign = "left";
 				//ctx.drawImage(base1_image, 0, 0,base1_image.width, base1_image.height);
@@ -2207,7 +2300,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 8 \u{2B95} Persamaan Garis Lurus </p>";
+	dd1.innerHTML="<p>Bab 8 \u{2192} Persamaan Garis Lurus </p>";
 	if(no==2){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";

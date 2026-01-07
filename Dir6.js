@@ -2126,7 +2126,7 @@ function Print6(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 6 \u{2B95} Aritmatika Sosial </p>";
+	dd1.innerHTML="<p>Bab 6 \u{2192} Aritmatika Sosial </p>";
 	if(no==5){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan tabel berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan tabel berikut!</p>";

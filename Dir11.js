@@ -1592,7 +1592,7 @@ function Print11(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+" cm²<br>B. "+Ar[1]+" cm²<br>C. "+Ar[2]+" cm²<br>D. "+Ar[3]+" cm²</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+" cm\u{00B2}<br>B. "+Ar[1]+" cm\u{00B2}<br>C. "+Ar[2]+" cm\u{00B2}<br>D. "+Ar[3]+" cm\u{00B2}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -1980,7 +1980,7 @@ function Print11(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 11 \u{2B95} Segiempat </p>";
+	dd1.innerHTML="<p>Bab 11 \u{2192} Segiempat </p>";
 	if(no==1){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut!</p>";

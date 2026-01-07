@@ -226,7 +226,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			ctx.drawImage(base0_image, 0, 0,base0_image.width, base0_image.height);
 			ctx.font = "16px Times New Roman";
 			ctx.textAlign = "center";
-			ctx.fillText(sudut+"°",65,70);
+			ctx.fillText(sudut+"\u{00B0}",65,70);
 			//ctx.fillText(arr[0],0,100);
 			//ctx.fillText(arr[1],0,160);
 		}
@@ -322,10 +322,10 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		const datas = GambarProperti1(canv,0);
 		
 		//Perhatikan gambar segitiga di atas ! 
-		//Jika DAC = 140°, maka besar ABC adalah ...
+		//Jika DAC = 140\u{00B0}, maka besar ABC adalah ...
 		
 		var ss;
-		ss = "Jika ∠DAC = "+sudut+"°, maka besar ∠ABC adalah ... ";
+		ss = "Jika \u{2220}DAC = "+sudut+"\u{00B0}, maka besar \u{2220}ABC adalah ... ";
 		
 		var Ar = [];
 		// jawaban
@@ -339,7 +339,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -356,11 +356,11 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		const datas = GambarProperti2(canv,0);
 		
 		//Perhatikan gambar di atas ! 
-		//Diketahui ∠A2=4x, ∠A3=5x, dan ∠B1=8p°, maka nilai p adalah ...
+		//Diketahui \u{2220}A2=4x, \u{2220}A3=5x, dan \u{2220}B1=8p\u{00B0}, maka nilai p adalah ...
 		
 		var ss;
 		ss = "Perhatikan gambar di atas !  ";
-		ss += "Diketahui ∠A2 = "+pasang[0]+"x, ∠A3 = "+pasang[1]+"x, dan ∠B1 = "+arkoef+"p°, maka nilai p adalah ... ";
+		ss += "Diketahui \u{2220}A2 = "+pasang[0]+"x, \u{2220}A3 = "+pasang[1]+"x, dan \u{2220}B1 = "+arkoef+"p\u{00B0}, maka nilai p adalah ... ";
 		
 		var Ar = [];
 		// jawaban
@@ -379,7 +379,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -414,7 +414,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -428,11 +428,11 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var benar=thesudut[1];
 		var salah=thesudut[2];
 		
-		//Sudut x berkomplemen dengan sudut y yang memiliki suplemen 153°. 
+		//Sudut x berkomplemen dengan sudut y yang memiliki suplemen 153\u{00B0}. 
 		//Jika x dan z dua sudut luar sepihak, maka nilai z adalah
 		
 		var ss;
-		ss = "Sudut x berkomplemen dengan sudut y yang memiliki suplemen "+sudut+"°. ";
+		ss = "Sudut x berkomplemen dengan sudut y yang memiliki suplemen "+sudut+"\u{00B0}. ";
 		ss += "Jika x dan z dua sudut luar sepihak, maka nilai z adalah ... ";
 		
 		
@@ -453,7 +453,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -469,12 +469,12 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		const datas = GambarProperti5(canv);
 		
-		//Pada gambar di atas, diketahui ∠A2 = (4x + 46) dan ∠B4 = (5x + 25)°.
-		//Besar ∠A1 adalah ...
+		//Pada gambar di atas, diketahui \u{2220}A2 = (4x + 46) dan \u{2220}B4 = (5x + 25)\u{00B0}.
+		//Besar \u{2220}A1 adalah ...
 		
 		var ss;
-		ss = "Pada gambar di atas, diketahui ∠A2 = "+string1+" dan ∠B4 = "+string2+"°. ";
-		ss += "Besar ∠A1 adalah ... ";
+		ss = "Pada gambar di atas, diketahui \u{2220}A2 = "+string1+" dan \u{2220}B4 = "+string2+"\u{00B0}. ";
+		ss += "Besar \u{2220}A1 adalah ... ";
 		
 		var Ar = [];
 		// jawaban
@@ -493,7 +493,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -509,11 +509,11 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		const sdt = GambarProperti6(canv,sudut);
 		
 		//Perhatikan gambar segitiga di atas !
-		//Besar ∠TQR adalah ...
+		//Besar \u{2220}TQR adalah ...
 		
 		var ss;
 		ss = "Perhatikan gambar segitiga di atas ! ";
-		ss += "Besar ∠TQR adalah ... ";
+		ss += "Besar \u{2220}TQR adalah ... ";
 		
 		var Ar = [];
 		// jawaban
@@ -532,7 +532,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -548,13 +548,13 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var benar=thesudut[2];
 		var salah=thesudut[3];
 		
-		//Pada segitiga ABC, diketahui besar sudut C = 50°, 
-		//sedangkan pelurus sudut B = 100°. 
+		//Pada segitiga ABC, diketahui besar sudut C = 50\u{00B0}, 
+		//sedangkan pelurus sudut B = 100\u{00B0}. 
 		//Jenis segitiga ABC adalah ...
 		
 		var ss;
-		ss = "Pada segitiga ABC, diketahui besar sudut C = "+sudut1+"°, ";
-		ss += "sedangkan pelurus sudut B = "+perlurus3+"°. ";
+		ss = "Pada segitiga ABC, diketahui besar sudut C = "+sudut1+"\u{00B0}, ";
+		ss += "sedangkan pelurus sudut B = "+perlurus3+"\u{00B0}. ";
 		ss += "Jenis segitiga ABC adalah ... ";
 		
 		var Ar = [];
@@ -589,10 +589,10 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		const datas = GambarProperti8(canv);
 		
-		//Pada gambar diketahui ∠A2 = 78°. Besar ∠B3 adalah ...
+		//Pada gambar diketahui \u{2220}A2 = 78\u{00B0}. Besar \u{2220}B3 adalah ...
 		
 		var ss;
-		ss = "Pada gambar diketahui ∠A2 = "+sudut+"°. Besar ∠B3 adalah ...";
+		ss = "Pada gambar diketahui \u{2220}A2 = "+sudut+"\u{00B0}. Besar \u{2220}B3 adalah ...";
 			
 		var Ar = [];
 		// jawaban
@@ -611,7 +611,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -647,7 +647,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		Ar = RandomMyArray(Ar);
 		var noBenar = NoJawabanBenar(Ar, jawab);
 		
-		var textSoal = ss+" <p>A. "+Ar[0]+"°<br>B. "+Ar[1]+"°<br>C. "+Ar[2]+"°<br>D. "+Ar[3]+"°</p>";
+		var textSoal = ss+" <p>A. "+Ar[0]+"\u{00B0}<br>B. "+Ar[1]+"\u{00B0}<br>C. "+Ar[2]+"\u{00B0}<br>D. "+Ar[3]+"\u{00B0}</p>";
 		var ArFix = [];
 		ArFix.push(textSoal);
 		ArFix.push(GetABCD(noBenar));
@@ -731,7 +731,7 @@ function Print9(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 9 \u{2B95} Garis dan Sudut </p>";
+	dd1.innerHTML="<p>Bab 9 \u{2192} Garis dan Sudut </p>";
 	if(no==1){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar di bawah ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar di bawah ini!</p>";
