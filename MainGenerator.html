@@ -246,15 +246,7 @@
 				<button id="bPrint" class="model" onclick="fPreview()" disabled="true">Preview</button>
 				
 				<script>
-					var arBabNo = [15,20,23,20,13,30,20,19,10,20,20,20];
-					var nBab = 1;
-					var nNo = 1;
-					var maxBab=19;
-					var maxNo=arBabNo[nBab];
-					var fCek = false;
-				</script>
-				
-				<script>
+					// seleksi tombol bab dan tombol nomor
 					const expandBtn = document.querySelector(".expand-btn");
 					const expandBtnno = document.querySelector(".expand-btnno");
 					expandBtn.addEventListener("click", function () {
@@ -280,8 +272,8 @@
 					function MasukBab(no){
 						//klik bab
 						nBab = no;
-						//console.log(nNo+" "+nBab+" "+Arimax[nBab-1])
-						if(nNo>Arimax[nBab-1]) nNo = Arimax[nBab-1];
+						//console.log(nNo+" "+nBab+" "+arBabNo[nBab-1])
+						if(nNo>arBabNo[nBab-1]) nNo = arBabNo[nBab-1];
 						maxNo=arBabNo[nBab];
 						ShowHideButton();
 						
@@ -523,18 +515,25 @@
 		<script type="text/javascript" src="./Dir10.js"></script>
 		<script type="text/javascript" src="./Dir11.js"></script>
 		<script type="text/javascript" src="./Dir12.js"></script>
+		<script type="text/javascript" src="./Dir13.js"></script>
 		<script type="text/javascript">
-						
-			var Arimax = [15,20,23,20,13,30,20,19,10,20,20,20];
-			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11,Print12];
+			
+			var arBabNo = [15,20,23,20,13,30,20,19,10,20,20,20,20];
+			var nBab = 1;
+			var nNo = 1;
+			var maxBab=19;
+			var maxNo=arBabNo[nBab];
+			var fCek = false;
+			
+			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11,Print12,Print13];
 			var np = 0;
 			var no = 0;
 			var ArrAmbil = [];
 			function ShowHideButton(){
-				maxBab = 12;
+				maxBab = 13;
 				
-				//console.log(nBab,Arimax[nBab-1])
-				maxNo = Arimax[nBab-1];
+				//console.log(nBab,arBabNo[nBab-1])
+				maxNo = arBabNo[nBab-1];
 				ButtonShow(maxBab);
 				ButtonShowNo(maxNo);
 				Cek(nBab,nNo);
