@@ -516,22 +516,21 @@
 		<script type="text/javascript" src="./Dir11.js"></script>
 		<script type="text/javascript" src="./Dir12.js"></script>
 		<script type="text/javascript" src="./Dir13.js"></script>
+		<script type="text/javascript" src="./Dir14.js"></script>
 		<script type="text/javascript">
 			
-			var arBabNo = [15,20,23,20,13,30,20,19,10,20,20,20,20];
+			var arBabNo = [15,20,23,20,13,30,20,19,10,20,20,20,20,20];
 			var nBab = 1;
 			var nNo = 1;
-			var maxBab=19;
+			var maxBab=14;// <saat ini masih 14> total 19;
 			var maxNo=arBabNo[nBab];
 			var fCek = false;
 			
-			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11,Print12,Print13];
+			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11,Print12,Print13,Print14];
 			var np = 0;
 			var no = 0;
 			var ArrAmbil = [];
 			function ShowHideButton(){
-				maxBab = 13;
-				
 				//console.log(nBab,arBabNo[nBab-1])
 				maxNo = arBabNo[nBab-1];
 				ButtonShow(maxBab);
