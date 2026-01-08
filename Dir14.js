@@ -1877,7 +1877,7 @@ function Print14(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 13 \u{2192} Lingkaran </p>";
+	dd1.innerHTML="<p>Bab 14 \u{2192} Bangun Ruang </p>";
 	if(no==1){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan gambar berikut!</p>";
