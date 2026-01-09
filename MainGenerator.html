@@ -517,16 +517,17 @@
 		<script type="text/javascript" src="./Dir12.js"></script>
 		<script type="text/javascript" src="./Dir13.js"></script>
 		<script type="text/javascript" src="./Dir14.js"></script>
+		<script type="text/javascript" src="./Dir15.js"></script>
 		<script type="text/javascript">
 			
-			var arBabNo = [15,20,23,20,13,30,20,19,10,20,20,20,20,20];
+			var arBabNo = [15,20,23,20,13,30,20,19,10,20,20,20,20,20,8];
 			var nBab = 1;
 			var nNo = 1;
-			var maxBab=14;// <saat ini masih 14> total 19;
+			var maxBab=15;// <saat ini masih 14> total 19;
 			var maxNo=arBabNo[nBab];
 			var fCek = false;
 			
-			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11,Print12,Print13,Print14];
+			var nmPrint = [Print1,Print2,Print3,Print4,Print5,Print6,Print7,Print8,Print9,Print10,Print11,Print12,Print13,Print14,Print15];
 			var np = 0;
 			var no = 0;
 			var ArrAmbil = [];
@@ -700,11 +701,11 @@
 				var canvjawab = document.createElement('canvas');
 				document.body.appendChild(canvjawab);
 				canvjawab.width = 300;
-				canvjawab.height = 1000;
+				canvjawab.height = 1010; // kalau 1000 ada 2 baris yang bisa nyelip di kertas jawaban
 				ctxjawab = canvjawab.getContext("2d");
 				//ctxjawab.fillStyle = '#D3D3D3';
 				ctxjawab.fillStyle = '#ffffff';
-				ctxjawab.fillRect(0, 0, 150, 1000);
+				ctxjawab.fillRect(0, 0, canvjawab.width, canvjawab.height);
 				ctxjawab.fillStyle = '#000000';
 				ctxjawab.textAlign = "left";
 				ctxjawab.font = "16px Arial";
