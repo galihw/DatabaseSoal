@@ -1857,7 +1857,7 @@ function Print19(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 	
 	
 	
-	dd1.innerHTML="<p>Bab 20 \u{2192} Barisan dan Deret </p>";
+	dd1.innerHTML="<p>Bab 19 \u{2192} Barisan dan Deret </p>";
 	if(no==2){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan pola yang dibentuk dari potongan lidi berikut ini!</p>";
 		else			dd1.innerHTML+="<p>"+nourut+". Perhatikan pola yang dibentuk dari potongan lidi berikut ini!</p>";
