@@ -535,12 +535,13 @@
 			var np = 0;
 			var no = 0;
 			var ArrAmbil = [];
+			Cek(nBab,nNo); //<< awal harus lihat bab 1 nomor 1
 			function ShowHideButton(){
 				//console.log(nBab,arBabNo[nBab-1])
 				maxNo = arBabNo[nBab-1];
 				ButtonShow(maxBab);
 				ButtonShowNo(maxNo);
-				Cek(nBab,nNo);
+				//Cek(nBab,nNo); << gak usah
 			}
 			function fAmbil(){
 				// Ambil soal yang aktif
