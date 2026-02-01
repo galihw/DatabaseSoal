@@ -175,53 +175,66 @@ function Print2(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		}
 		return mini;
 	}
+		function CariFPB(ar){
+			//https://www.ketutrare.com/2019/05/contoh-aplikasi-fpb-dan-kpk-menggunakan-bahasa-c.html
+			
+			var min = 0;
+			var max = 0;
+			for(var i=0;i<ar.length;i++){
+				min = Math.min(min,ar[i]);
+				max = Math.max(max,ar[i]);
+			}
+			
+			var iter = 0;
+			var fpb = 1;
+			var f = [];
+			do {
+				iter++;
+				ff = 1;
+				for(var i=0;i<ar.length;i++){
+					f[i] = Mods(ar[i],iter)==0;
+					ff *= f[i];
+				}
+				
+				if (ff){
+					fpb = iter;
+				}
+				fakhir = iter==max;
+			}while (!fakhir);
+			
+			return fpb;
+		}
 	function GetSoal20(){
-		//47. Amir mempunyai 3 buah bambu dengan panjang masing-masing 429 cm, 273 cm ,dan 195 cm. Ketiga bambu tersebut akan dipotong sama panjang. Panjang masing-masing bambu adalah …
-		//a. 21 cm
-		//b. 18 cm
-		//c. 13 cm
-		//d. 11 cm
 		var ArPrima = BilanganPrimaMaksN(8);
 		ArPrima = RandomMyArray(ArPrima);
-
-		var m1 = RandomAngkaAtoB(1,3);
-		var m2 = RandomAngkaAtoB(1,2);
-		var m3 = RandomAngkaAtoB(1,1);
-		var n1 = m1;
-		var n2 = RandomAngkaAtoB(2,3);
-		var n3 = RandomAngkaAtoB(1,3);
-		var p1 = m1;
-		var p2 = 1;
-		var p3 = RandomAngkaAtoB(1,3);
+		var pp1 = [2,3,4,5];pp1 = RandomMyArray(pp1);
+		var pp2 = [2,3,4,5];pp2 = RandomMyArray(pp2);
+		var pp3 = [2,3,4,5];pp3 = RandomMyArray(pp3);
 		
-		var aa = APangkatN(ArPrima[0],m1) * APangkatN(ArPrima[1],m2) * APangkatN(ArPrima[2],m3);
-		var bb = APangkatN(ArPrima[0],n1) * APangkatN(ArPrima[1],n2) * APangkatN(ArPrima[2],n3);
-		var cc = APangkatN(ArPrima[0],p1) * APangkatN(ArPrima[1],p2) * APangkatN(ArPrima[2],p3);
+		var aa = ArPrima[0]**pp1[0]*ArPrima[1]*ArPrima[2];
+		var bb = ArPrima[0]*ArPrima[1]**pp2[0]*ArPrima[2];
+		var cc = ArPrima[0]*ArPrima[1]*ArPrima[2]**pp3[0];
+						
+		var dd = CariFPB([aa,bb,cc]);
+		//console.log(aa,bb,cc,dd);
+		var ddlain = [dd-ArPrima[0],dd-ArPrima[1],dd-ArPrima[2],dd+ArPrima[2],dd+ArPrima[1],dd+ArPrima[0]];
+		ddlain = RandomMyArray(ddlain);
+		var ee,ff,gg
+		ee = ddlain[0];
+		ff = ddlain[1];
+		gg = ddlain[2];
 		
 		if (aa>=1000)	aa = StringRibuan(aa);
 		if (bb>=1000)	bb = StringRibuan(bb);
 		if (cc>=1000)	cc = StringRibuan(cc);
-		
-		var qmax1 = Maksimum([m1,n1,p1]);
-		var qmax2 = Maksimum([m2,n2,p2]);
-		var qmax3 = Maksimum([m3,n3,p3]);
-		var qmin1 = Minimum([m1,n1,p1]);
-		var qmin2 = Minimum([m2,n2,p2]);
-		var qmin3 = Minimum([m3,n3,p3]);
-		
-		var dd = APangkatN(ArPrima[0],qmin1) * APangkatN(ArPrima[1],qmin2) * APangkatN(ArPrima[3],qmin3);
-		var ee = APangkatN(ArPrima[0],qmax1) * APangkatN(ArPrima[1],qmin2) * 1;
-		var ff = dd-10;
-		var gg = APangkatN(ArPrima[0],1) * APangkatN(ArPrima[1],1) * APangkatN(ArPrima[2],qmax3+1);
-		
 		if (dd>=1000)	dd = StringRibuan(dd);
 		if (ee>=1000)	ee = StringRibuan(ee);
 		if (ff>=1000)	ff = StringRibuan(ff);
 		if (gg>=1000)	gg = StringRibuan(gg);
-
+		
 		var Nama = ["Amir", "Ilham","Faiz","Dimas","Uqi","Ais","Avi"];
 		Nama = RandomMyArray(Nama);
-
+		
 		var ss = "" +Nama[0]+ " mempunyai 3 buah bambu dengan panjang masing-masing " +aa+ " cm, " +bb+ " cm, dan " +cc+ " cm. Ketiga bambu tersebut akan dipotong sama panjang. Panjang masing-masing bambu adalah ... </p>"
 		
 		var Ar = []

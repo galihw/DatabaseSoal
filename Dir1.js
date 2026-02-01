@@ -237,7 +237,7 @@ function Print1(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var a1,a2,a3,a4,a5;
 		a1 = RandomAngkaAtoB(1,6);
 		a2 = RandomAngkaAtoB(a1+6,6);
-		a3 = a2-a1+1;
+		a3 = a2-a1-1;
 		a4 = a3-RandomAngkaAtoB(1,2);
 		var H_GenapAntara = BilGenapAntara(a1,a2);
 		var HimPBagian = nCr(a3,a4);
@@ -256,7 +256,7 @@ function Print1(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 			var ff2 = arrSalah[0]==arrSalah[1] || arrSalah[0]==arrSalah[2] || arrSalah[1]==arrSalah[2];
 			var ff3 = arrSalah[0]<1 || arrSalah[1]<1 || arrSalah[2]<1;
 		}while(ff1 || ff2 || ff3)
-		return [a1,a2,benar,arrSalah];
+		return [a1,a2,a4,benar,arrSalah];
 	}
 	function MyHimpunan4(){
 		var nS,nA,nB,AnB,AuBc;
@@ -808,15 +808,18 @@ function Print1(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		//[a1,a2,benar,arrSalah];
 		var a1=MyData[0];
 		var a2=MyData[1];
-		var benar=MyData[2];
-		var arrSalah=MyData[3];
+		var a3=MyData[2];
+		var benar=MyData[3];
+		var arrSalah=MyData[4];
 		
 		//3. Diketahui H = {x | 1 < x < 16, x ∊ bilangan genap}
 		//Banyak himpunan bagian dari H yang terdiri dari 6 anggota adalah ...
 
 		var ss
-		ss = "Diketahui H = {x | "+a1+" < x < "+a2+", x "+supE+" bilangan genap} <br>";
-		ss += "Banyak himpunan bagian dari H yang terdiri dari 6 anggota adalah ...";
+		//ss = "Diketahui H = {x | "+a1+" < x < "+a2+", x ∊ bilangan genap} <br>";
+		ss = "Diketahui H = {x | "+a1+" < x < "+a2+", x \u{2208} bilangan asli} <br>";
+		//ss += "Banyak himpunan bagian dari H yang terdiri dari 6 anggota adalah ...";
+		ss += "Banyak himpunan bagian dari H yang terdiri dari "+a3+" anggota adalah ...";
 		
 		var Ar = [];
 		// jawaban

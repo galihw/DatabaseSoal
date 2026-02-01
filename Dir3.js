@@ -1285,7 +1285,7 @@ function Print3(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		var ss
 		alj = StringMinus(alj);
-		ss = "Nilai x untuk memenuhi persamaan "+alj+" adalah ...";
+		ss = "Hasil sederhana dari "+alj+" adalah ...";
 		
 		var Ar = [];
 		// jawaban
