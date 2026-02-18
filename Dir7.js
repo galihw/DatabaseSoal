@@ -132,7 +132,7 @@ function Print7(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		if (n>0)
 			strfix += ".";
 		for (var i=0; i<m; i++){
-			for (j=0; j<3; j++){
+			for (var j=0; j<3; j++){
 				iter++;
 				strfix += arfix[iter];
 			}

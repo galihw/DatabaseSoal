@@ -89,7 +89,7 @@ function Print18(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		var strff = ""+ff;
 		var len = strff.length;
 		var gg = "";
-		for (i=0;i<len;i++){
+		for (var i=0;i<len;i++){
 			if(strff.substr(i,1)==".")	gg += ",";
 			else 						gg += strff.substr(i,1);
 		}
@@ -135,7 +135,7 @@ function Print18(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		if (n>0)
 			strfix += ".";
 		for (var i=0; i<m; i++){
-			for (j=0; j<3; j++){
+			for (var j=0; j<3; j++){
 				iter++;
 				strfix += arfix[iter];
 			}
