@@ -2308,7 +2308,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 269;
 		ss = namefunc[no-1](cc1.id);;
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2319,7 +2319,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);;
 		//document.write("<p>"+ss[0]+"</p>");
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2331,7 +2331,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 400;
 		ss = namefunc[no-1](cc1.id);;
 		//document.write("<p>"+ss[0]+"</p>");
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2343,7 +2343,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 280;
 		ss = namefunc[no-1](cc1.id);;
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2360,7 +2360,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		
 		ss = namefunc[no-1](cc1.id,cc2.id);;
 		//document.write("<p>"+ss[0]+"</p>");
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else if(no==8){
@@ -2370,7 +2370,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL8 = GambarPG8(cc1.id,ss[2]);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2381,7 +2381,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 32;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2392,7 +2392,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL10 = GambarPG10(cc1.id,ss[2]);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2404,7 +2404,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 300;
 		cc1.height = 190;
 		const DrawPGL15 = GambarPG15(cc1.id,ss[2]);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2416,7 +2416,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height = 280;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2426,7 +2426,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 450;
 		cc1.height = 1130;
 		ss = namefunc[no-1](cc1.id);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -2438,7 +2438,7 @@ function Print8(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 179;
 		cc1.height = 190;
 		const MyGambar19 = GambarPG19(cc1.id,ss[2]);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);

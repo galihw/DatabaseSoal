@@ -1322,7 +1322,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang2 = GambarPeluang2(cc1.id,ss[4],ss[3],ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1340,7 +1340,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		cc1.height = 480;
 		ss = namefunc[no-1](cc1.id);
 		//dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1351,7 +1351,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang4 = GambarPeluang4(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1362,7 +1362,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang5 = GambarPeluang5(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1373,7 +1373,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang6 = GambarPeluang6(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1384,7 +1384,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang7 = GambarPeluang7(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1395,7 +1395,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang8 = GambarPeluang8(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1406,7 +1406,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+"."+ss[0]+"</p>";
 		else			dd1.innerHTML+="<p>"+nourut+"."+ss[0]+"</p>";
 		const DrawPeluang9 = GambarPeluang9(cc1.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1421,7 +1421,7 @@ function GambarPeluang2(nmcanvas,arr,nn,njaw){
 		cc2.width = 100;
 		cc2.height = 184;
 		const DrawPeluang10b = GambarPeluang10b(cc2.id,ss[2]);
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 		hidingElemen(dd3);
 	}else{

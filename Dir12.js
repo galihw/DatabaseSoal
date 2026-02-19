@@ -2028,7 +2028,7 @@ function NamaBilangan(){
 		cc1.height = 251;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2043,7 +2043,7 @@ function NamaBilangan(){
 		cc2.height = 200;
 		const DrawPGL = GambarKongruen3B(cc2.id,ss[2]);
 		//dd3.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc3);
 	}else if(no==4){
 		if(nourut==0)	dd1.innerHTML+="<p>"+no+". Perhatikan gambar berikut!</p>";
@@ -2052,7 +2052,7 @@ function NamaBilangan(){
 		cc1.height = 140;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2063,7 +2063,7 @@ function NamaBilangan(){
 		cc1.height = 160;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2074,7 +2074,7 @@ function NamaBilangan(){
 		cc1.height = 177;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2085,7 +2085,7 @@ function NamaBilangan(){
 		cc1.height = 200;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2096,7 +2096,7 @@ function NamaBilangan(){
 		cc1.height = 210;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2107,7 +2107,7 @@ function NamaBilangan(){
 		cc1.height = 200;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2118,7 +2118,7 @@ function NamaBilangan(){
 		cc1.height = 160;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2129,7 +2129,7 @@ function NamaBilangan(){
 		cc1.height = 202;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2140,7 +2140,7 @@ function NamaBilangan(){
 		cc1.height = 161;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2151,7 +2151,7 @@ function NamaBilangan(){
 		cc1.height = 176;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2162,7 +2162,7 @@ function NamaBilangan(){
 		cc1.height = 170;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -2173,7 +2173,7 @@ function NamaBilangan(){
 		cc1.height = 200;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);

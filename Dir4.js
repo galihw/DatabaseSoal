@@ -1884,7 +1884,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 179;
 		cc1.height= 190;
 		const MyGambar2 = PropertiAljabar2(cc1.id,ss[2]);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1896,7 +1896,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 179;
 		cc1.height= 190;
 		const MyGambar3 = PropertiAljabar3(cc1.id,ss[2]);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1908,7 +1908,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height= 47;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";  
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1919,7 +1919,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height= 47;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1930,7 +1930,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height= 49;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1941,7 +1941,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height= 49;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1952,7 +1952,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.height= 46;
 		ss = namefunc[no-1](cc1.id);
 		dd2.innerHTML="<p>"+ss[0]+"</p>";
-		dd4.innerHTML+="<br>Jawaban : "+ss[1];
+		dd4.innerHTML+="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd3);
@@ -1962,7 +1962,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 110;
 		cc1.height= 250;
 		ss = namefunc[no-1](cc1.id);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1973,7 +1973,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 212;
 		cc1.height= 250;
 		ss = namefunc[no-1](cc1.id);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
@@ -1984,7 +1984,7 @@ function Print4(no,d1,c1,d2,c2,d3,c3,d4,nourut){
 		cc1.width = 179;
 		cc1.height= 250;
 		ss = namefunc[no-1](cc1.id);
-		dd4.innerHTML="<br>Jawaban : "+ss[1];
+		dd4.innerHTML="Jawaban : "+ss[1];
 		hidingElemen(cc2);
 		hidingElemen(cc3);
 		hidingElemen(dd2);
